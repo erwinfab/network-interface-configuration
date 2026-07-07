@@ -25,9 +25,34 @@ The enterprise environment requires an administrator to configure persistent net
 
 **Step 1: Target Interface Identification**
 * Before creating network profiles, query the local hardware configuration to isolate the logical network interface bound to the hardware Layer 2 MAC link address `52:54:00:00:fa:0b`.
+
 <img width="909" height="388" alt="image" src="https://github.com/user-attachments/assets/d153649f-f085-4157-9b4e-252785133894" />
 
 **Step 2: Connection Provisioning and Primary Address Assignment**
-*Build a persistent configuration profile matching the strict parameter limits provided by the infrastructure scenario
+* Build a persistent configuration profile matching the strict parameter limits provided by the infrastructure scenario.
+
 <img width="916" height="459" alt="image" src="https://github.com/user-attachments/assets/b0b1d452-ac4e-4edc-9e8b-4230f9eb19cc" />
 
+**Step 3: Interface Multi-Homing and Boot Automation**
+* Append the secondary administrative private network layer onto the newly provisioned profile. Ensure the profile initializes automatically during power states, while disabling autostart loops on obsolete default configurations.  
+  * Append the secondary IPv4 address without removing the primary
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
