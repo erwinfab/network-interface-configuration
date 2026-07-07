@@ -65,16 +65,23 @@ The capture highlights the system tracking state transformations. Notice the top
 **Step 4: Local Name Resolution Services**
 * Modify the local POSIX network tables to bind the secondary management sub-network interface directly to an administrative network alias (`vi /etc/hosts`).  
 
- * Add the routing map line at the bottom of the system database file:  
+  * Add the routing map line at the bottom of the system database file:  
 <img width="801" height="376" alt="image" src="https://github.com/user-attachments/assets/7475386c-6be9-4f7c-bdcc-e69e0de0e4e0" />
 
+## 📊 Verification and Testing
 
+**Step 1: System Boot Persistence Validation**
 
+* Trigger a cold reboot of the Linux system kernel to test whether the configuration profiles initialize cleanly and persistently without human intervention.
 
+<img width="1013" height="711" alt="image" src="https://github.com/user-attachments/assets/ed4a06e1-1553-4ac4-8095-c1dc3eb7b6b2" />
 
+**Step 2: Layer 3 Interface & Resolution Verification**
+ * Once the operating system initializes, inspect the layer properties to confirm that both IP address spaces are attached to the device interface, and ping the local translation alias:  
 
+<img width="842" height="661" alt="image" src="https://github.com/user-attachments/assets/9880bbf1-dd3f-43ac-a255-df5569479bd0" />
 
-
+**Step 3: Programmatic Laboratory Evaluation**
 
 
 
