@@ -1,4 +1,4 @@
-#Network Interface Configuration Lab (Red Hat Enterprise Linux)
+# Network Interface Configuration Lab (Red Hat Enterprise Linux)
 
 ## Project Overview
 This project demonstrates the ability to configure complex manual network settings on a Red Hat Enterprise Linux server. The objective is to provision multiple static IPv4 networks on a single primary hardware interface using modern `NetworkManager` CLI utilities, automate interface connection states across reboots, and establish localized DNS maps.  
