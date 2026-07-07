@@ -36,7 +36,22 @@ The enterprise environment requires an administrator to configure persistent net
 **Step 3: Interface Multi-Homing and Boot Automation**
 * Append the secondary administrative private network layer onto the newly provisioned profile. Ensure the profile initializes automatically during power states, while disabling autostart loops on obsolete default configurations.  
   * Append the secondary IPv4 address without removing the primary
- 
+ `nmcli connection modify lab +ipv4.addresses 10.0.1.1/24`
+  * Enforce boot autostart configuration policies
+`nmcli connection modify lab connection.autoconnect yes`
+`nmcli connection modify "Wired connection 1" connection.autoconnect no`
+
+**🔧 Technical Note & State Realignment Verification**:
+During the initial execution of this setup, checking the operational connection parameters using nmcli connection show revealed that the newly created lab profile was successfully written to disk but sat inactive (indicated by a trailing device state parameter of --). This occurred because the default interface connection profile (Wired connection 1) still maintained an exclusive runtime lock on the physical interface.
+
+To resolve this profile collision and cleanly transition runtime ownership over to the enterprise layout without requiring a disruptive system bounce, the hardware context was explicitly assigned and initialized directly through the CLI:
+* Explicitly bind the configuration profile to the hardware interface
+`nmcli connection modify lab ifname eth0`
+
+* Force active interface switchover execution
+`nmcli connection up lab`
+
+<img width="913" height="689" alt="image" src="https://github.com/user-attachments/assets/a3a01a4b-120a-46fc-b04c-8afd21172b21" />
 
 
 
