@@ -27,4 +27,7 @@ The enterprise environment requires an administrator to configure persistent net
 * Before creating network profiles, query the local hardware configuration to isolate the logical network interface bound to the hardware Layer 2 MAC link address `52:54:00:00:fa:0b`.
 <img width="909" height="388" alt="image" src="https://github.com/user-attachments/assets/d153649f-f085-4157-9b4e-252785133894" />
 
-<img width="809" height="409" alt="image" src="https://github.com/user-attachments/assets/3988c55c-c731-4efa-9604-f4fc8ac5f970" />
+**Step 2: Connection Provisioning and Primary Address Assignment**
+*Build a persistent configuration profile matching the strict parameter limits provided by the infrastructure scenario
+<img width="916" height="459" alt="image" src="https://github.com/user-attachments/assets/b0b1d452-ac4e-4edc-9e8b-4230f9eb19cc" />
+
