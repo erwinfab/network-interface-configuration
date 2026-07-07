@@ -36,13 +36,11 @@ The enterprise environment requires an administrator to configure persistent net
 **Step 3: Interface Multi-Homing and Boot Automation**
 * Append the secondary administrative private network layer onto the newly provisioned profile. Ensure the profile initializes automatically during power states, while disabling autostart loops on obsolete default configurations.
 
-  - Append the secondary IPv4 address without removing the primary
- 
+ * Append the secondary IPv4 address without removing the primary
  `nmcli connection modify lab +ipv4.addresses 10.0.1.1/24`
-  - Enforce boot autostart configuration policies
-  
-`nmcli connection modify lab connection.autoconnect yes`
 
+* Enforce boot autostart configuration policies
+`nmcli connection modify lab connection.autoconnect yes`
 `nmcli connection modify "Wired connection 1" connection.autoconnect no`
 
 **🔧 Technical Note & State Realignment Verification**:
