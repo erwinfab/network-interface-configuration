@@ -87,7 +87,8 @@ The capture highlights the system tracking state transformations. Notice the top
 <img width="731" height="711" alt="image" src="https://github.com/user-attachments/assets/76edf03f-2d46-405f-a69f-ace994680592" />
 
 **🔍 Post-Evaluation Quality Audit & Typo Remediation:**
-Initial execution of the programmatic grading script returned an isolated `FAIL` on the validation check: `Check lab IPv4 DNS`.
+
+* Initial execution of the programmatic grading script returned an isolated `FAIL` on the validation check: `Check lab IPv4 DNS`.
 
 **Root Cause Analysis:** A syntax verification check of the initial interface provisioning command revealed a single-digit character omission in the first octet of the domain name resolution string (`ipv4.dns 17.25.250.254`), misconfiguring the intended gateway routing target.
 
@@ -98,6 +99,9 @@ Initial execution of the programmatic grading script returned an isolated `FAIL`
 
   *  Force a configuration reload of the active connection profile
 `nmcli connection up lab`
+
+
+<img width="859" height="473" alt="image" src="https://github.com/user-attachments/assets/1f2a5449-20ac-4e50-8213-8b211ccdb7f9" />
 
 Subsequent regression execution of `lab net-review grade` successfully returned a clean, 100% compliant `PASS` metric across all structural testing boundaries.
 
