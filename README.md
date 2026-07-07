@@ -17,7 +17,7 @@ The enterprise environment requires an administrator to configure persistent net
 
 * **Connection Profile Name**: `lab`
 * **Target Interface Assignment**: Variable interface corresponding to MAC Address `52:54:00:00:fa:0b`
-* **Primary Subnet Configuration**: `172.25.250.11/24` | Gateway: `172.25.250.254` | DNS: `172.25.250.254`   
+* **Primary Subnet Configuration**: IP: `172.25.250.11/24` | Gateway: `172.25.250.254` | DNS: `172.25.250.254`   
 * **Secondary Management Subnet**: `10.0.1.1/24`   
 * **Local Translation Routing Rule**: Resolve `10.0.1.1` cleanly via the alias `private` 
 
@@ -25,3 +25,4 @@ The enterprise environment requires an administrator to configure persistent net
 
 **Step 1: Target Interface Identification**
 * Before creating network profiles, query the local hardware configuration to isolate the logical network interface bound to the hardware Layer 2 MAC link address `52:54:00:00:fa:0b`.
+<img width="909" height="388" alt="image" src="https://github.com/user-attachments/assets/d153649f-f085-4157-9b4e-252785133894" />
