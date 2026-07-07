@@ -24,4 +24,4 @@ The enterprise environment requires an administrator to configure persistent net
 ## 🛠️ High-Level Deployment and Configuration Steps
 
 **Step 1: Target Interface Identification**
-- Before creating network profiles, query the local hardware configuration to isolate the logical network interface bound to the hardware Layer 2 MAC link address 52:54:00:00:fa:0b.
+* Before creating network profiles, query the local hardware configuration to isolate the logical network interface bound to the hardware Layer 2 MAC link address `52:54:00:00:fa:0b`.
