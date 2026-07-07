@@ -20,3 +20,8 @@ The enterprise environment requires an administrator to configure persistent net
 * **Primary Subnet Configuration**: `172.25.250.11/24` | Gateway: `172.25.250.254` | DNS: `172.25.250.254`   
 * **Secondary Management Subnet**: `10.0.1.1/24`   
 * **Local Translation Routing Rule**: Resolve `10.0.1.1` cleanly via the alias `private` 
+
+## 🛠️ High-Level Deployment and Configuration Steps
+
+**Step 1: Target Interface Identification**
+- Before creating network profiles, query the local hardware configuration to isolate the logical network interface bound to the hardware Layer 2 MAC link address 52:54:00:00:fa:0b.
