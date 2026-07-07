@@ -36,11 +36,11 @@ The enterprise environment requires an administrator to configure persistent net
 **Step 3: Interface Multi-Homing and Boot Automation**
 * Append the secondary administrative private network layer onto the newly provisioned profile. Ensure the profile initializes automatically during power states, while disabling autostart loops on obsolete default configurations.
 
-  * Append the secondary IPv4 address without removing the primary:
+   * Append the secondary IPv4 address without removing the primary:
 
  `nmcli connection modify lab +ipv4.addresses 10.0.1.1/24`
 
- * Enforce boot autostart configuration policies:
+   * Enforce boot autostart configuration policies:
 
 `nmcli connection modify lab connection.autoconnect yes`
 
@@ -62,7 +62,11 @@ To resolve this profile collision and cleanly transition runtime ownership over 
 <img width="913" height="689" alt="image" src="https://github.com/user-attachments/assets/a3a01a4b-120a-46fc-b04c-8afd21172b21" />
 The capture highlights the system tracking state transformations. Notice the top lookup showing Wired connection 1 actively mapping to eth0 while lab sits unassigned. The manual runtime modification sequence overrides this, resulting in the successful, live activation of the lab layout (turning green) over the eth0 data lane.
 
+**Step 4: Local Name Resolution Services**
+* Modify the local POSIX network tables to bind the secondary management sub-network interface directly to an administrative network alias (`vi /etc/hosts`).  
 
+ * Add the routing map line at the bottom of the system database file:  
+<img width="801" height="376" alt="image" src="https://github.com/user-attachments/assets/7475386c-6be9-4f7c-bdcc-e69e0de0e4e0" />
 
 
 
