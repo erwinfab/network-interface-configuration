@@ -60,7 +60,7 @@ To resolve this profile collision and cleanly transition runtime ownership over 
   
 `nmcli connection up lab`
 
-<img width="913" height="689" alt="image" src="https://github.com/user-attachments/assets/a3a01a4b-120a-46fc-b04c-8afd21172b21" 
+<img width="913" height="689" alt="image" src="https://github.com/user-attachments/assets/a3a01a4b-120a-46fc-b04c-8afd21172b21">
   
 The capture highlights the system tracking state transformations. Notice the top lookup showing Wired connection 1 actively mapping to eth0 while lab sits unassigned. The manual runtime modification sequence overrides this, resulting in the successful, live activation of the lab layout (turning green) over the eth0 data lane.
 
